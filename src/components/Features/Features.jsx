@@ -3,7 +3,7 @@ import styles from './features.module.css'
 const Features = () => {
     return (
         <div className={styles.container}>
-            <h1>Features</h1>
+            Features
         </div>
     );
 };

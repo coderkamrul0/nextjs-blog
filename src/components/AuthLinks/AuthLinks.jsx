@@ -1,11 +1,21 @@
-import React from 'react';
-import styles from './authlinks.module.css'
+import React from "react";
+import styles from "./authlinks.module.css";
+import Link from "next/link";
 const AuthLinks = () => {
-    return (
-        <div className={styles.container}>
-            <h1>AuthLinks</h1>
-        </div>
-    );
+  //temporary
+  const status = "notAuthenticated";
+  return (
+    <>
+      {status === "notAuthenticated" ? (
+        <Link href={"/login"}>Login</Link>
+      ) : (
+        <>
+          <Link href={"/write"}>Write</Link>
+          <span className={styles.link}>Logout</span>
+        </>
+      )}
+    </>
+  );
 };
 
 export default AuthLinks;
